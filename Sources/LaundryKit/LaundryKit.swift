@@ -41,7 +41,7 @@ public struct LaundryRoom: Decodable {
 public struct LaundryService {
     
     public static func getLaundryLocations() -> Future<[LaundryRoom], APIError> {
-        return APIRequest.getResource(from: LaundryEndpoints.locations, with: EmptyBody(), get: [LaundryRoom].self)
+        return APIRequest.getResource(from: LaundryEndpoints.locations, get: [LaundryRoom].self)
     }
     
 }
