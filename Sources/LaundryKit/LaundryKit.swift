@@ -22,7 +22,7 @@ public enum LaundryEndpoints: APIResource {
     }
     
     public var parameters: [String : String]? {
-        return nil;
+        return nil
     }
     
 }
@@ -40,7 +40,7 @@ public struct LaundryRoom: Decodable {
 @available(iOS 13.0, *)
 public struct LaundryService {
     
-    public static func getLaundryLocations() -> Publishers.Future<[LaundryRoom], APIError> {
+    public static func getLaundryLocations() -> Future<[LaundryRoom], APIError> {
         return APIRequest.getResource(from: LaundryEndpoints.locations, with: EmptyBody(), get: [LaundryRoom].self)
     }
     
