@@ -28,8 +28,8 @@ public enum LaundryEndpoints: APIResource {
 }
 
 public struct LaundryRoom: Decodable {
-    let name: String
-    let id: String
+    public let name: String
+    public let id: String
     
     enum CodingKeys: String, CodingKey {
         case name = "laundryName"
